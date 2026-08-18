@@ -1,0 +1,39 @@
+/* Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Heebo', sans-serif;
+    /* A nice Hebrew font */
+}
+
+#hero {
+    height: 60vh;
+    background: url('../images/pet5.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
