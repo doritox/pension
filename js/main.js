@@ -14,13 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Gallery Lightbox ---
-    const galleryImages = document.querySelectorAll('#gallery img');
-    galleryImages.forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', () => {
+    const galleryItems = document.querySelectorAll('#gallery .gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            const imgSrc = item.getAttribute('href');
+            const imgAlt = item.querySelector('img').getAttribute('alt');
+            
             // Defensive check: Ensure the library is loaded before using it.
             if (window.basicLightbox) {
-                basicLightbox.create(`<img src="${img.src}" alt="${img.alt}">`).show();
+                basicLightbox.create(`<img src="${imgSrc}" alt="${imgAlt}">`).show();
             }
         });
     });
