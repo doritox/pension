@@ -40,20 +40,29 @@ body {
 
 /* Testimonials Section */
 #testimonials {
-    background-color: #f8f9fa; /* Same as other bg-light sections */
+    background-color: #f8f9fa;
+    /* Same as other bg-light sections */
 }
 
-.testimonial-card {
+.hover-effect-card {
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #fff; /* Ensure background color is consistent */
+}
+
+.hover-effect-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card {
+    /* These styles are now handled by .hover-effect-card */
 }
 
 .testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* These styles are now handled by .hover-effect-card */
 }
 
 .testimonial-card .card-body {
@@ -71,9 +80,11 @@ body {
 }
 
 .testimonial-card .card-text::before {
-    content: '\201C'; /* Opening quote */
+    content: '\201C';
+    /* Opening quote */
     font-size: 3rem;
-    color: #0d6efd; /* Bootstrap primary color */
+    color: #0d6efd;
+    /* Bootstrap primary color */
     font-weight: bold;
     line-height: 0;
     position: relative;
@@ -84,18 +95,12 @@ body {
 /* Carousel Controls */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(1); /* Makes the icons dark */
+    filter: invert(1);
+    /* Makes the icons dark */
 }
 
 #testimonialCarousel .testimonial-card {
-    margin: 0 auto 2rem auto; /* Center and add bottom margin */
+    margin: 0 auto 2rem auto;
+    /* Center and add bottom margin */
     max-width: 90%;
-}
-
-#servicesCarousel .card {
-    margin: 0 auto 2rem auto; /* Center and add bottom margin */
-    max-width: 90%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 10px;
 }
