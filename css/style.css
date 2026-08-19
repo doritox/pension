@@ -80,3 +80,22 @@ body {
     top: 15px;
     margin-right: -10px;
 }
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Makes the icons dark */
+}
+
+#testimonialCarousel .testimonial-card {
+    margin: 0 auto 2rem auto; /* Center and add bottom margin */
+    max-width: 90%;
+}
+
+#servicesCarousel .card {
+    margin: 0 auto 2rem auto; /* Center and add bottom margin */
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+}
